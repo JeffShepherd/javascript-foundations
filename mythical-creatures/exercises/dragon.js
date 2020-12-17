@@ -1,24 +1,23 @@
 //
+
 class Dragon {
   constructor(name, rider) {
     this.name = name;
     this.rider = rider;
     this.hungry = true;
-    this.mealsEaten = 0;
+    this.counter = 0;
   }
   greet() {
     return `Hi, ${this.rider}!`;
   }
+
   eat() {
-    this.mealsEaten += 1;
-    if (this.mealsEaten > 2) {
+    if (this.counter < 2){
+      this.counter += 1;
+    } else {
       this.hungry = false;
     }
   }
 }
-
-
-
-
 
 module.exports = Dragon;
